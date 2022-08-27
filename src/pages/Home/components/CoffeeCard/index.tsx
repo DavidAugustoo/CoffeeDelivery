@@ -43,7 +43,7 @@ export function CoffeeCard({ coffee }: CoffeeProps ) {
       ...coffee,
       quantity,
     }
-    console.log(coffeeToAdd);
+    
     addCoffeeToCart(coffeeToAdd)
   }
 
