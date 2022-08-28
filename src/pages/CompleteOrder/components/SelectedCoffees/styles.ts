@@ -3,6 +3,7 @@ import { SectionBaseStyle } from "../CompleteOrderForm/styles";
 
 export const SelectedCoffeesContainer = styled.div`
  display: flex;
+ max-width: 100%;
  
  flex-direction: column;
  width: 40rem;

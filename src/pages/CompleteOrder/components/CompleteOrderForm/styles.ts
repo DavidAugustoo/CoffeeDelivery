@@ -4,7 +4,7 @@ export const CompleteOrderFormContainer = styled.div`
  display: flex;
  flex-direction: column;
  gap: 0.75rem;
- width: 40rem;
+ width: 100%;
 `
 
 export const SectionBaseStyle = styled.div`
@@ -33,7 +33,23 @@ export const AddressFormContainer = styled.div`
  .complement {
     grid-column: span 2;
  }
-`
+
+ @media (max-width: 1000px) {
+   grid-template-columns: repeat(1, 1fr);
+
+   .cep {
+    grid-column: 1;
+    max-width: 100%;
+   }
+
+   .street {
+    grid-column: 1;
+   }
+
+   .complement {
+    grid-column: 1;
+   }
+ }`
 
 export const PaymentMethodOptionsContainer = styled.div`
  display: grid;
@@ -43,5 +59,9 @@ export const PaymentMethodOptionsContainer = styled.div`
  > p {
    grid-column: span 3;
    color: ${({ theme }) => theme.colors["base-error"]}
+ }
+
+ @media (max-width: 1000px) {
+   grid-template-columns: repeat(1, 1fr);
  }
 `
